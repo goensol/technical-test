@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "rootDir": "..",
+    "composite": true,
+    "target": "ESNext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "module": "commonjs",
+    "outDir": "../dist",
+    "strict": true,
+    "allowJs": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "ts-node": {
+    "swc": true,
+    "transpileOnly": true
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended"
+}

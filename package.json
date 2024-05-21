@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "ensol-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/frontend",
+    "packages/backend",
+    "packages/shared",
+    "packages/types"
+  ],
+  "packageManager": "yarn@4.3.0"
+}

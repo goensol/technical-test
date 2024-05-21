@@ -1,0 +1,18 @@
+{
+  "references": [
+    {
+      "path": "./packages/frontend"
+    },
+    {
+      "path": "./packages/backend"
+    },
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/types"
+    }
+  ],
+  "files": [],
+  "include": []
+}
