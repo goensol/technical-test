@@ -1,5 +1,9 @@
-import { Title } from "@mantine/core";
+import SimulationContainer from "./layout/SimulationContainer";
 
 export const MainComponent = () => {
-  return <Title>Your code goes here :)</Title>;
+  return (
+    <>
+      <SimulationContainer />
+    </>
+  );
 };
