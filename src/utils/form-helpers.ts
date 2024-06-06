@@ -4,6 +4,20 @@ import {
   Orientation,
 } from "@ensol-test/interfaces";
 
+export const createOrientationData = (): { value: string; label: string }[] => {
+  const data: { value: string; label: string }[] = [];
+
+  for (const orientationKey in Orientation) {
+    if (Orientation.hasOwnProperty(orientationKey)) {
+      const orientationValue =
+        Orientation[orientationKey as keyof typeof Orientation];
+      data.push({ value: orientationValue, label: orientationValue });
+    }
+  }
+
+  return data;
+};
+
 export const isSimulationFormValid = (
   formValues: SimulationFormState
 ): SimulationFormValidation => {

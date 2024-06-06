@@ -14,7 +14,36 @@ export enum Orientation {
   EAST = "Est",
 }
 
+export enum SimulationStatus {
+  NOT_STARTED,
+  RUNNING,
+  FINISH,
+  FAILED,
+}
+
 export interface SimulationFormValidation {
   isValid: boolean;
   errors: Partial<Record<keyof SimulationFormState, string>>;
+}
+
+export interface SimulationResults {
+  optimalYearlyIrradiance: number;
+  efficiencyLossOrientationInclination: number;
+  yearlyIrradiance: number;
+  yearlyProductionPerCapacity: number;
+  customerYearlyUsage: number;
+  estimationOfCustomerInstallationPower: number;
+  nbOfPanels: number;
+  installationCapacity: number;
+  yearlyProd: number;
+}
+export interface SizingSliceState {
+  data: SimulationResults;
+  simulationStatus: SimulationStatus;
+  loading: boolean;
+  error: string | null;
+}
+
+export interface EfficiencyLossData {
+  [key: string]: number;
 }

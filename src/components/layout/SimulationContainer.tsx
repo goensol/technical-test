@@ -1,4 +1,4 @@
-import { Grid, Container, Title } from "@mantine/core";
+import { Grid, Container, Title, Text } from "@mantine/core";
 import SimulationForm from "../simulation-form/SimulationForm";
 import SimulationResults from "../simulation-results/SimulationResults";
 
