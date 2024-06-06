@@ -61,7 +61,7 @@ export const fetchData =
 
       dispatch(fetchDataSuccess(simulationResults));
     } catch (error: any) {
-      dispatch(fetchDataFailure(error.message));
+      dispatch(fetchDataFailure(error.response.data.message));
     }
   };
 

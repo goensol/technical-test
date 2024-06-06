@@ -653,6 +653,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@maptalks/feature-filter@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@maptalks/feature-filter@npm:1.3.0"
+  checksum: 019770bc533d5dc3d6afaf76966d7c1b68c04e8baf5a4efeb772d093527e7a64e0ad47d8c227d648a33a19e668255fcb1a8eecc109c32c1352f35646219b75b3
+  languageName: node
+  linkType: hard
+
+"@maptalks/function-type@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@maptalks/function-type@npm:1.3.1"
+  dependencies:
+    colorin: "npm:^0.2.0"
+  checksum: 87fb4b35928853c51a5c43d4ba10a80fa6d4c62c8b1c8e5849f4b0d02ff5a559fb7ec048045dfb3d63a36a695764466400fa80a469f6e3f5ed4fad8016135286
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -900,6 +916,13 @@ __metadata:
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
   checksum: a996a745e6c5d60292f36731dd41341339d4eeed8180bb09226e5c8d23759067692b1d88e5d91d72ee83dfc00d3aca8e7bd43ea120516c17922cbcb7c3e252db
+  languageName: node
+  linkType: hard
+
+"@types/maptalks@npm:^0.49.6":
+  version: 0.49.6
+  resolution: "@types/maptalks@npm:0.49.6"
+  checksum: 8fcea34d378d5af10b32c97e9a48fb59394610d3c292fa11f7f83de0783965a30bc5bbb0c5f3749fb0538936632ca17218a32c340e5295649ab39dcaf1a6c9d9
   languageName: node
   linkType: hard
 
@@ -1378,6 +1401,13 @@ __metadata:
   version: 1.1.4
   resolution: "color-name@npm:1.1.4"
   checksum: a1a3f914156960902f46f7f56bc62effc6c94e84b2cae157a526b1c1f74b677a47ec602bf68a61abfa2b42d15b7c5651c6dbe72a43af720bc588dff885b10f95
+  languageName: node
+  linkType: hard
+
+"colorin@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "colorin@npm:0.2.0"
+  checksum: da528c0bb3ca20c728948197e80288831f75b4ac3223835fce118efa7052916a5b846bdf2cea70e9f7956e656a1dc84a29a869cff5337e661f724ab1f5b88690
   languageName: node
   linkType: hard
 
@@ -1916,6 +1946,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"frustum-intersects@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "frustum-intersects@npm:0.1.0"
+  checksum: a074a68ae5d4d6593ad228d27efb20cd9ed765b77c54999b32ccad074b98cb2a6fe4ffac0df1afd14469790a6099e3e0a2b12e49232233fc1a7cc5bbf84ee677
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^2.0.0":
   version: 2.1.0
   resolution: "fs-minipass@npm:2.1.0"
@@ -2413,6 +2450,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"maptalks@npm:^1.0.0-rc.33":
+  version: 1.0.0-rc.33
+  resolution: "maptalks@npm:1.0.0-rc.33"
+  dependencies:
+    "@maptalks/feature-filter": "npm:^1.3.0"
+    "@maptalks/function-type": "npm:^1.3.1"
+    frustum-intersects: "npm:^0.1.0"
+    rbush: "npm:^2.0.2"
+    simplify-js: "npm:^1.2.1"
+    zousan: "npm:^2.3.3"
+  checksum: 18c53695f4bec19479c18bfaa15365f629f74728d138f96f94bb64f04d78752d6fcbb26a76d8c50ae4135881ef88199745fd0dfba950f4dff98a0ac45f441d06
+  languageName: node
+  linkType: hard
+
 "merge2@npm:^1.3.0, merge2@npm:^1.4.1":
   version: 1.4.1
   resolution: "merge2@npm:1.4.1"
@@ -2844,6 +2895,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"quickselect@npm:^1.0.1":
+  version: 1.1.1
+  resolution: "quickselect@npm:1.1.1"
+  checksum: 8890dfe3c42d18e84fb5c18aee04da49b0f5b9d2a7196344c4451cb5660549a2bf770be866704a4a9e6c73d35475c599dd24cf78abcc19886ab54c019a952a37
+  languageName: node
+  linkType: hard
+
+"rbush@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "rbush@npm:2.0.2"
+  dependencies:
+    quickselect: "npm:^1.0.1"
+  checksum: dfaef8171ff1fb15924e0a84150cc23e31508d67a7821ddb948cd0a5d003f5a20406836866bb1a2dc1f1e2dee06aeb2ce02a1f61a4a8f84ccb792696f43883a7
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^18.2.0":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
@@ -3166,6 +3233,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"simplify-js@npm:^1.2.1":
+  version: 1.2.4
+  resolution: "simplify-js@npm:1.2.4"
+  checksum: 2d4054bd13eb77d7f3f911ca8c8325cf6e66a44ae0bbd7ed68cd0d30c5429924a58fac7c027d2083a0c978decadd2d7249068585a0a63421b3372ffd1191865e
+  languageName: node
+  linkType: hard
+
 "slash@npm:^3.0.0":
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
@@ -3328,6 +3402,7 @@ __metadata:
     "@mantine/form": "npm:^7.4.2"
     "@mantine/hooks": "npm:^7.4.2"
     "@reduxjs/toolkit": "npm:^2.2.5"
+    "@types/maptalks": "npm:^0.49.6"
     "@types/prettier": "npm:^3.0.0"
     "@types/react": "npm:^18.2.43"
     "@types/react-dom": "npm:^18.2.17"
@@ -3340,6 +3415,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.0.1"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.5"
+    maptalks: "npm:^1.0.0-rc.33"
     prettier: "npm:^3.0.3"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -3664,5 +3740,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zousan@npm:^2.3.3":
+  version: 2.5.1
+  resolution: "zousan@npm:2.5.1"
+  checksum: 5ec600dbd16877412d49e6336027ee822b2d66304ddfbab34978adff7e4bc9f21af2e27d04efe704e077f0ffc73dbc213037cee60aac75345d8b5bf8c5e291fd
   languageName: node
   linkType: hard

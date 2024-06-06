@@ -17,15 +17,14 @@ export const POWER_PER_PANEL: number = 0.425; //kWc / unit
 export const INDEX_CORRECT_SIZING: number = 0.85;
 
 export const DEFAULT_SIMULATION_FORM_STATE: SimulationFormState = {
-  latitude: 47.48,
-  longitude: -0.606,
-  // latitude: 43.701,
-  // longitude: 7.268,
-  // inclination: 30,
-  inclination: 50,
+  latitude: 47.099,
+  longitude: -1.187,
+  inclination: 30,
   orientation: Orientation.SOUTH,
-  monthlyBill: 166,
+  monthlyBill: 300,
 };
+
+export const INITIAL_MAP_COORDINATES = [];
 
 export const ORIENTATION_DATA = createOrientationData();
 

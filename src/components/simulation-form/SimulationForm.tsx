@@ -13,7 +13,10 @@ import {
   Fieldset,
   LoadingOverlay,
 } from "@mantine/core";
-import { isSimulationFormValid } from "@ensol-test/utils/form-helpers";
+import {
+  isSimulationFormValid,
+  updateStateIssueWithMaptalks,
+} from "@ensol-test/utils/form-helpers";
 import { useAppDispatch, useAppSelector } from "@ensol-test/app/hooks";
 import { RootState } from "@ensol-test/app/store";
 import {
@@ -21,6 +24,8 @@ import {
   INCLINAISON_DATA,
   ORIENTATION_DATA,
 } from "@ensol-test/constants";
+import MapSimulationForm from "../map-simulation-form/MapSimulationForm";
+import { drawMarker } from "@ensol-test/utils/handle-map";
 
 export default function SimulationForm() {
   const dispatch = useAppDispatch();
@@ -38,6 +43,12 @@ export default function SimulationForm() {
     let newState = { ...formState };
     newState[key] = value;
 
+    if (key !== "latitude" && key !== "longitude") {
+      newState = updateStateIssueWithMaptalks(newState);
+    } else {
+      drawMarker(newState.longitude, newState.latitude);
+    }
+
     const validationResult = isSimulationFormValid(newState);
 
     setFormState(newState);
@@ -46,7 +57,10 @@ export default function SimulationForm() {
   };
 
   const handleSubmit = () => {
-    dispatch(fetchData(formState));
+    let newState = { ...formState };
+    newState = updateStateIssueWithMaptalks(newState);
+    dispatch(fetchData(newState));
+    setFormState(newState);
   };
 
   const { latitude, longitude, inclination, orientation, monthlyBill } =
@@ -62,6 +76,7 @@ export default function SimulationForm() {
           zIndex={1000}
           overlayProps={{ radius: "sm", blur: 2 }}
         />
+        <MapSimulationForm />
         <Group grow align="start">
           <NumberInput
             required
@@ -74,6 +89,7 @@ export default function SimulationForm() {
             onChange={(value) => handleForm("latitude", value as number)}
             decimalScale={3}
             error={errors.latitude ? errors.latitude : false}
+            id="input-latitude"
           />
 
           <NumberInput
@@ -87,6 +103,7 @@ export default function SimulationForm() {
             onChange={(value) => handleForm("longitude", value as number)}
             decimalScale={3}
             error={errors.longitude ? errors.longitude : false}
+            id="input-longitude"
           />
         </Group>
         <Space h="lg" />
@@ -95,7 +112,7 @@ export default function SimulationForm() {
           <InputWrapper
             id="input-slider"
             required
-            label="Inclinaison (°)"
+            label="Inclinaison du toit (°)"
             size="sm"
           >
             <Space h="lg" />
@@ -120,7 +137,7 @@ export default function SimulationForm() {
           <Select
             required
             allowDeselect={false}
-            label="Orientation"
+            label="Orientation du toit "
             placeholder="Sud"
             value={orientation}
             data={ORIENTATION_DATA}

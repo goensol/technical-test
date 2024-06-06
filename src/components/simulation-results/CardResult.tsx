@@ -1,7 +1,4 @@
 import { Text, Card, DefaultMantineColor, StyleProp } from "@mantine/core";
-import LoadingOverlayResults from "../loading-overlay-results/LoadingOverlayResults";
-import { useAppSelector } from "@ensol-test/app/hooks";
-import { RootState } from "@ensol-test/app/store";
 
 interface CardResultProps {
   text: string;
@@ -16,13 +13,8 @@ export default function CardResult({
   unit,
   variant,
 }: CardResultProps) {
-  const simulationStatus = useAppSelector(
-    (state: RootState) => state.sizing.simulationStatus
-  );
-
   return (
     <Card shadow="md" padding="lg" radius="md" withBorder>
-      <LoadingOverlayResults simulationStatus={simulationStatus} />
       <Text>{text}</Text>
       <Text fz="xl" fw={700} c={variant}>
         {value}

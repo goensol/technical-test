@@ -18,6 +18,35 @@ export const createOrientationData = (): { value: string; label: string }[] => {
   return data;
 };
 
+export const updateStateIssueWithMaptalks = (
+  state: SimulationFormState
+): SimulationFormState => {
+  let newState = { ...state };
+
+  const inputLatitude = document.getElementById(
+    "input-latitude"
+  ) as HTMLInputElement | null;
+  const inputLongitude = document.getElementById(
+    "input-longitude"
+  ) as HTMLInputElement | null;
+
+  if (
+    inputLatitude !== null &&
+    parseFloat(inputLatitude.value) !== state.latitude
+  ) {
+    newState.latitude = parseFloat(inputLatitude.value);
+  }
+
+  if (
+    inputLongitude !== null &&
+    parseFloat(inputLongitude.value) !== state.longitude
+  ) {
+    newState.longitude = parseFloat(inputLongitude.value);
+  }
+
+  return newState;
+};
+
 export const isSimulationFormValid = (
   formValues: SimulationFormState
 ): SimulationFormValidation => {
