@@ -23,14 +23,17 @@ const sizingSlice = createSlice({
     fetchDataStart: (state) => {
       state.loading = true;
       state.error = null;
+      state.simulationStatus = SimulationStatus.RUNNING;
     },
     fetchDataSuccess: (state, action) => {
       state.loading = false;
       state.data = action.payload;
+      state.simulationStatus = SimulationStatus.SUCCESS;
     },
     fetchDataFailure: (state, action) => {
       state.loading = false;
       state.error = action.payload;
+      state.simulationStatus = SimulationStatus.FAILURE;
     },
   },
 });

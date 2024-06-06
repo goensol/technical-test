@@ -17,8 +17,8 @@ export enum Orientation {
 export enum SimulationStatus {
   NOT_STARTED,
   RUNNING,
-  FINISH,
-  FAILED,
+  SUCCESS,
+  FAILURE,
 }
 
 export interface SimulationFormValidation {

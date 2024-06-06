@@ -144,7 +144,7 @@ export default function SimulationForm() {
         <Space h="lg" />
 
         <Button disabled={!isFormValid} onClick={handleSubmit}>
-          Simuler !
+          Simuler
         </Button>
       </Fieldset>
     </>
