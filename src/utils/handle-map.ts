@@ -12,7 +12,7 @@ export const initMap = () => {
     center: [
       DEFAULT_SIMULATION_FORM_STATE.longitude,
       DEFAULT_SIMULATION_FORM_STATE.latitude,
-    ], // Initial center coordinates (Paris)
+    ],
     zoom: 19,
     baseLayer: new maptalks.TileLayer("tile", {
       urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
