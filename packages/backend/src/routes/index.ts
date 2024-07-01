@@ -10,6 +10,12 @@ router.get(
   '/simulations',
   asyncErrorMiddleware<SimulationParameters, SimulationResponse>(async (req, res) => {
 
+    if (
+      req.query.inclination < 0 || req.query.inclination > 90 || req.query.monthlyBill < 0 || !['S', 'E', 'SE', 'SW', 'W'].includes(req.query.orientation) 
+    ) {
+      res.status(400).send()
+    }
+
     const results = computeInstall(req.query) // @ts-ignore
 
     res.json(await results);
