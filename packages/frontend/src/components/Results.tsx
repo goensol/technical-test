@@ -2,7 +2,7 @@ import { SimulationResponse } from '@ensol-test/types/simulations';
 import { Card, Group, Stack, Text, Title } from '@mantine/core';
 
 type Props = {
-  results: SimulationResponse;
+  results: SimulationResponse | undefined;
 };
 
 export const Results = ({ results }: Props) => {
