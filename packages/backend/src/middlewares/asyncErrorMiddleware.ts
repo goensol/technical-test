@@ -5,7 +5,7 @@ interface ParsedQs {
 }
 
 export const asyncErrorMiddleware = <
-  Params extends Record<string, string>,
+  Params extends Record<string, number | string>,
   Res extends Record<string, unknown> | string | null | void = void,
   Body extends Record<string, unknown> | undefined = undefined,
   Query extends ParsedQs = Record<string, never>,

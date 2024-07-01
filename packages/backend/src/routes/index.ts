@@ -2,15 +2,17 @@ import { asyncErrorMiddleware } from '@ensol-test/backend/middlewares/asyncError
 import { SimulationParameters, SimulationResponse } from '@ensol-test/types/simulations';
 
 import express from 'express';
+import { computeInstall } from '../engine/compute';
 
 const router = express.Router();
 
 router.get(
   '/simulations',
   asyncErrorMiddleware<SimulationParameters, SimulationResponse>(async (req, res) => {
-    //...
 
-    res.json({});
+    const results = computeInstall(req.query) // @ts-ignore
+
+    res.json(await results);
   }),
 );
 
