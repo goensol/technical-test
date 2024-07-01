@@ -336,6 +336,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ensol-test/shared@workspace:packages/shared":
+  version: 0.0.0-use.local
+  resolution: "@ensol-test/shared@workspace:packages/shared"
+  dependencies:
+    typescript: "npm:^5.4.4"
+  languageName: unknown
+  linkType: soft
+
 "@ensol-test/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@ensol-test/types@workspace:packages/types"
@@ -690,7 +698,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:^7.4.2":
+"@mantine/core@npm:^7.11.0, @mantine/core@npm:^7.4.2":
   version: 7.11.0
   resolution: "@mantine/core@npm:7.11.0"
   dependencies:
@@ -720,7 +728,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:^7.4.2":
+"@mantine/hooks@npm:^7.11.0, @mantine/hooks@npm:^7.4.2":
   version: 7.11.0
   resolution: "@mantine/hooks@npm:7.11.0"
   peerDependencies:
@@ -2061,6 +2069,9 @@ __metadata:
 "ensol-app@workspace:.":
   version: 0.0.0-use.local
   resolution: "ensol-app@workspace:."
+  dependencies:
+    "@mantine/core": "npm:^7.11.0"
+    "@mantine/hooks": "npm:^7.11.0"
   languageName: unknown
   linkType: soft
 

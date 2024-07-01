@@ -10,5 +10,9 @@
     "packages/shared",
     "packages/types"
   ],
-  "packageManager": "yarn@4.3.0"
+  "packageManager": "yarn@4.3.0",
+  "dependencies": {
+    "@mantine/core": "^7.11.0",
+    "@mantine/hooks": "^7.11.0"
+  }
 }
