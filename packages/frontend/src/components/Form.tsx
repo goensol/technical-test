@@ -43,13 +43,16 @@ export const Form = ({ onSubmit }: Props) => {
             hideControls
             onChange={(event) => setInclination(Number(event))}
             required
+            clampBehavior='strict'
+            min={0}
+            max={90}
           />
         </Group>
         <Group grow align='flex-end'>
           <Text>Orientation</Text>
           <Select
             placeholder="Select orientation"
-            data={['S', 'E', 'W', 'SE', 'SW']}
+            data={['S', 'W', 'SE', 'SW']}
             value={orientation}
             onChange={(event) => setOrientation(event as Orientation)}
             required
@@ -60,7 +63,9 @@ export const Form = ({ onSubmit }: Props) => {
           <NumberInput
             placeholder='200€'
             value={monthlyBill}
+            suffix='€'
             hideControls
+            allowNegative={false}
             onChange={(event) => setMonthlyBill(Number(event))}
             required
           />
