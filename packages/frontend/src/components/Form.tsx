@@ -1,6 +1,6 @@
 import { getSimulation } from '@ensol-test/frontend/queries/simulation';
-import { SimulationResponse } from '@ensol-test/types/simulations';
-import { Button, Card, Group, Text, Stack, TextInput, Title, NumberInput } from '@mantine/core';
+import { Orientation, SimulationResponse } from '@ensol-test/types/simulations';
+import { Button, Card, Group, Text, Stack, Title, NumberInput, Select } from '@mantine/core';
 import { useState } from 'react';
 
 type Props = {
@@ -12,6 +12,7 @@ export const Form = ({ onSubmit }: Props) => {
   const [longitude, setLongitude] = useState<number>(0);
   const [inclination, setInclination] = useState<number>(0);
   const [monthlyBill, setMonthlyBill] = useState<number>(0);
+  const [orientation, setOrientation] = useState<Orientation>('S');
   return (
     <Card withBorder h="100%">
       <Stack>
@@ -45,6 +46,16 @@ export const Form = ({ onSubmit }: Props) => {
           />
         </Group>
         <Group grow align='flex-end'>
+          <Text>Orientation</Text>
+          <Select
+            placeholder="Select orientation"
+            data={['S', 'E', 'W', 'SE', 'SW']}
+            value={orientation}
+            onChange={(event) => setOrientation(event as Orientation)}
+            required
+          />
+        </Group>
+        <Group grow align='flex-end'>
           <Text>Montly Bill</Text>
           <NumberInput
             placeholder='200€'
@@ -56,7 +67,7 @@ export const Form = ({ onSubmit }: Props) => {
         </Group>
       </Stack>
       <Button mt="16" onClick={
-          async () => onSubmit(await getSimulation({ latitude, longitude, inclination, monthlyBill }))
+          async () => onSubmit(await getSimulation({ latitude, longitude, inclination, orientation, monthlyBill }))
           }>
         Lancer la simulation
       </Button>
