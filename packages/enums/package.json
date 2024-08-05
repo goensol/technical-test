@@ -1,11 +1,8 @@
 {
-  "name": "@ensol-test/shared",
+  "name": "@ensol-test/enums",
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
     "typescript": "^5.4.4"
-  },
-  "dependencies": {
-    "zod": "^3.23.8"
   }
 }

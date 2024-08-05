@@ -8,7 +8,8 @@
     "packages/frontend",
     "packages/backend",
     "packages/shared",
-    "packages/types"
+    "packages/types",
+    "packages/enums"
   ],
   "packageManager": "yarn@4.3.0"
 }

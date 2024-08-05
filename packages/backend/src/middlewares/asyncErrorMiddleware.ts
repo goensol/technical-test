@@ -1,4 +1,4 @@
-import { NextFunction, Request, RequestHandler, Response } from 'express';
+import { NextFunction, Request, RequestHandler, Response } from "express";
 
 interface ParsedQs {
   [key: string]: undefined | string | string[] | ParsedQs | ParsedQs[];
@@ -10,12 +10,12 @@ export const asyncErrorMiddleware = <
   Body extends Record<string, unknown> | undefined = undefined,
   Query extends ParsedQs = Record<string, never>,
 >(
-  endpointHandlerFunction: RequestHandler<Params, Res, Body, Query>,
+  endpointHandlerFunction: RequestHandler<Params, Res, Body, Query>
 ) => {
   return async function (
     req: Request<Params, Res, Body, Query>,
     res: Response,
-    next: NextFunction,
+    next: NextFunction
   ) {
     try {
       return await endpointHandlerFunction(req, res, next);
