@@ -1,22 +1,19 @@
-import { SimulationResponse } from "@ensol-test/types/simulations";
 import { SimpleGrid, Stack, Title } from "@mantine/core";
-import { useState } from "react";
+import { useSimulation } from "./hook";
 import { Result } from "./Result";
-import { SimulationForm } from "./SimulationForm";
+import { Form } from "./Form";
 
 export const Simulation = () => {
-  const [simulationResults, setSimulationResults] = useState<
-    SimulationResponse | undefined
-  >();
-
+  const { onSubmit, launchSimulationMutationResult } = useSimulation();
   return (
     <Stack>
       <Title order={2}>
         Faites une simulation de votre production photovoltaïque !
       </Title>
       <SimpleGrid cols={2}>
-        <SimulationForm onSubmit={() => {}} />
-        {simulationResults && <Result result={simulationResults} />}
+        <Form onSubmit={onSubmit} />
+
+        <Result {...launchSimulationMutationResult} />
       </SimpleGrid>
     </Stack>
   );

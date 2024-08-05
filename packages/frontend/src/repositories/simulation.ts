@@ -6,9 +6,8 @@ import {
 } from "@ensol-test/types/simulations";
 
 export const getSimulation = async (parameters: SimulationParameters) => {
-  const response = await httpClient.get<SimulationResponse>(
-    "/simulations",
-    parameters
-  );
+  const response = await httpClient.get<SimulationResponse>("/simulations", {
+    params: parameters,
+  });
   return response.data;
 };

@@ -1,19 +1,19 @@
 import { useZodForm } from "@ensol-test/frontend/hooks/useZodForm";
 import { simulatorSchema } from "@ensol-test/shared/validations/simulator";
 import { Card, Title } from "@mantine/core";
-import { Form } from "@ensol-test/frontend/components/molecules/Form";
+import { BasicForm } from "@ensol-test/frontend/components/molecules/BasicForm";
 import { FormInput } from "@ensol-test/frontend/components/molecules/FormInput";
 import { SubmitButton } from "@ensol-test/frontend/components/molecules/SubmitButton";
 import { Props } from "./type";
 
-export const SimulationForm = ({ onSubmit }: Props) => {
+export const Form = ({ onSubmit }: Props) => {
   const form = useZodForm({
     schema: simulatorSchema,
   });
   return (
-    <Card withBorder h="100%">
+    <Card withBorder>
       <Title order={3}>Simulator</Title>
-      <Form form={form} onSubmit={onSubmit}>
+      <BasicForm form={form} onSubmit={onSubmit}>
         <div className="p-4 space-y-4">
           <FormInput
             type="text"
@@ -50,7 +50,7 @@ export const SimulationForm = ({ onSubmit }: Props) => {
 
           <SubmitButton>Launch Simulation</SubmitButton>
         </div>
-      </Form>
+      </BasicForm>
     </Card>
   );
 };

@@ -1,7 +1,7 @@
 import { FieldValues, FormProvider } from "react-hook-form";
 import { Props } from "./type";
 
-export const Form = <TFormTypes extends FieldValues>({
+export const BasicForm = <TFormTypes extends FieldValues>({
   onSubmit,
   children,
   form,
