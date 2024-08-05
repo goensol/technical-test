@@ -9,6 +9,7 @@
     "baseUrl": "."
   },
   "include": [
-    "**/*"
+    "**/*",
+    "../shared/abstractions/httpClient.ts"
   ],
 }

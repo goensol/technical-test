@@ -8,5 +8,3 @@ export const simulatorSchema = z.object({
   monthlyBill: z.coerce.number().min(0),
   orientation: z.nativeEnum(OrientationEnum),
 });
-
-export type SimulationFormTypes = z.infer<typeof simulatorSchema>;
