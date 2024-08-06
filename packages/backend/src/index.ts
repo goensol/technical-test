@@ -1,8 +1,8 @@
-import express, { Express, NextFunction } from "express";
+import express, { Express } from "express";
 
 import cors from "cors";
 
-import { router } from "./routes";
+import { router } from "./simulation/simulation.route";
 
 const app: Express = express();
 const port = 8000;

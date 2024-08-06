@@ -1,6 +1,6 @@
-import { simulatorSchema } from "@ensol-test/shared/validations/simulator";
+import { simulationSchema } from "@ensol-test/shared/validations/simulation";
 import { z } from "zod";
-export type SimulationParameters = z.infer<typeof simulatorSchema>; // To define
+export type SimulationParameters = z.infer<typeof simulationSchema>; // To define
 export type SimulationResponse = {
   recommanderPanelCount: number;
   energyProductionEstimate: number;

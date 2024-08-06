@@ -1,5 +1,5 @@
 import { useZodForm } from "@ensol-test/frontend/hooks/useZodForm";
-import { simulatorSchema } from "@ensol-test/shared/validations/simulator";
+import { simulationSchema } from "@ensol-test/shared/validations/simulation";
 import { Card, Title } from "@mantine/core";
 import { BasicForm } from "@ensol-test/frontend/components/molecules/BasicForm";
 import { FormInput } from "@ensol-test/frontend/components/molecules/FormInput";
@@ -8,7 +8,7 @@ import { Props } from "./type";
 
 export const Form = ({ onSubmit }: Props) => {
   const form = useZodForm({
-    schema: simulatorSchema,
+    schema: simulationSchema,
   });
   return (
     <Card withBorder>
@@ -36,8 +36,8 @@ export const Form = ({ onSubmit }: Props) => {
           <FormInput
             type="number"
             label={"Inclination (°):"}
-            step={10}
             required
+            step={10}
             {...form.register("inclination")}
           />
           <FormInput

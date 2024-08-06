@@ -3,4 +3,5 @@ export enum OrientationEnum {
   SW = "SW",
   S = "S",
   SE = "SE",
+  E = "E",
 }
