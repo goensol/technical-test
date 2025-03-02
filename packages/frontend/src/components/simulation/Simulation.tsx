@@ -1,8 +1,9 @@
-import { Form } from "@ensol-test/frontend/components/Form";
-import { Results } from "@ensol-test/frontend/components/Results";
-import type { SimulationResponse } from "@ensol-test/types/simulations";
+import { Form } from "@ensol-test/frontend/components/simulation/Form";
+import { Results } from "@ensol-test/frontend/components/simulation/Results";
+import type { SimulationResponse } from "@ensol-test/types/simulation";
 import { SimpleGrid, Stack, Title } from "@mantine/core";
 import { useState } from "react";
+import { EmptyResults } from "./EmptyResults";
 
 export const Simulation = () => {
 	const [simulationResults, setSimulationResults] = useState<
@@ -14,9 +15,13 @@ export const Simulation = () => {
 			<Title order={2}>
 				Faites une simulation de votre production photovoltaïque !
 			</Title>
-			<SimpleGrid cols={2}>
+			<SimpleGrid cols={{ base: 1, md: 2 }}>
 				<Form onSubmit={setSimulationResults} />
-				<Results results={simulationResults} />
+				{simulationResults ? (
+					<Results results={simulationResults} />
+				) : (
+					<EmptyResults />
+				)}
 			</SimpleGrid>
 		</Stack>
 	);
