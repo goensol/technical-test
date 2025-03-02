@@ -1,8 +1,8 @@
 {
-  "name": "@ensol-test/types",
-  "version": "1.0.0",
-  "private": true,
-  "devDependencies": {
-    "typescript": "^5.4.4"
-  }
+	"name": "@ensol-test/types",
+	"version": "1.0.0",
+	"private": true,
+	"devDependencies": {
+		"typescript": "^5.4.4"
+	}
 }

@@ -1,17 +1,22 @@
-import { asyncErrorMiddleware } from '@ensol-test/backend/middlewares/asyncErrorMiddleware';
-import { SimulationParameters, SimulationResponse } from '@ensol-test/types/simulations';
+import { asyncErrorMiddleware } from "@ensol-test/backend/middlewares/asyncErrorMiddleware";
+import type {
+	SimulationParameters,
+	SimulationResponse,
+} from "@ensol-test/types/simulations";
 
-import express from 'express';
+import express from "express";
 
 const router = express.Router();
 
 router.get(
-  '/simulations',
-  asyncErrorMiddleware<SimulationParameters, SimulationResponse>(async (req, res) => {
-    //...
+	"/simulations",
+	asyncErrorMiddleware<SimulationParameters, SimulationResponse>(
+		async (req, res) => {
+			//...
 
-    res.json({});
-  }),
+			res.json({});
+		},
+	),
 );
 
 export { router };

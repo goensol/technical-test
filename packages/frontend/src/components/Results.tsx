@@ -1,14 +1,14 @@
-import { SimulationResponse } from '@ensol-test/types/simulations';
-import { Card, Stack } from '@mantine/core';
+import type { SimulationResponse } from "@ensol-test/types/simulations";
+import { Card, Stack } from "@mantine/core";
 
 type Props = {
-  results: SimulationResponse;
+	results: SimulationResponse;
 };
 
 export const Results = ({ results }: Props) => {
-  return (
-    <Card withBorder>
-      <Stack>Les résultats doivent apparaître ici</Stack>
-    </Card>
-  );
+	return (
+		<Card withBorder>
+			<Stack>Les résultats doivent apparaître ici</Stack>
+		</Card>
+	);
 };

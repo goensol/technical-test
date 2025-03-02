@@ -1,14 +1,22 @@
 {
-  "private": true,
-  "name": "ensol-app",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "workspaces": [
-    "packages/frontend",
-    "packages/backend",
-    "packages/shared",
-    "packages/types"
-  ],
-  "packageManager": "yarn@4.3.0"
+	"private": true,
+	"name": "ensol-app",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"workspaces": [
+		"packages/frontend",
+		"packages/backend",
+		"packages/shared",
+		"packages/types"
+	],
+	"scripts": {
+		"check": "biome check --write",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"husky": "^9.1.7"
+	},
+	"packageManager": "yarn@4.3.0"
 }
