@@ -432,6 +432,7 @@ __metadata:
   resolution: "@ensol-test/shared@workspace:packages/shared"
   dependencies:
     typescript: "npm:^5.4.4"
+    zod: "npm:^3.24.2"
   languageName: unknown
   linkType: soft
 
@@ -440,6 +441,7 @@ __metadata:
   resolution: "@ensol-test/types@workspace:packages/types"
   dependencies:
     typescript: "npm:^5.4.4"
+    zod: "npm:^3.24.2"
   languageName: unknown
   linkType: soft
 
@@ -4842,5 +4844,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10/f77b3d8d00310def622123df93d4ee654fc6a0096182af8bd60679ddcdfb3474c56c6c7190817c84a2785648cdee9d721c0154eb45698c62176c322fb46fc700
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.24.2":
+  version: 3.24.2
+  resolution: "zod@npm:3.24.2"
+  checksum: 10/604c62a8cf8e330d78b106a557f4b44f5d14845d20b1360a423ccc09b58cb8525ccf7e4b40cf1bd4852d22393d2c67774b5817ec5a2fedab25f543b36ed15943
   languageName: node
   linkType: hard

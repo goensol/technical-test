@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"devDependencies": {
-		"typescript": "^5.4.4"
+		"typescript": "^5.4.4",
+		"zod": "^3.24.2"
 	}
 }
