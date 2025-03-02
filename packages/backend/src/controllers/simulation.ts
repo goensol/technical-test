@@ -25,8 +25,14 @@ export class SimulationController {
 			);
 		}
 
+		const { latitude, longitude, orientation, inclination, monthlyBill } =
+			validationResult.data;
 		const result = await this.simulationService.calculateSimulation(
-			validationResult.data,
+			latitude,
+			longitude,
+			orientation,
+			inclination,
+			monthlyBill,
 		);
 		res.json(result);
 	}

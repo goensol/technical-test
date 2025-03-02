@@ -1,0 +1,242 @@
+[
+	{
+		"orientation": "S",
+		"inclination": 10,
+		"lookup": "S_10",
+		"efficiency_loss": 7.0
+	},
+	{
+		"orientation": "S",
+		"inclination": 20,
+		"lookup": "S_20",
+		"efficiency_loss": 2.0
+	},
+	{
+		"orientation": "S",
+		"inclination": 30,
+		"lookup": "S_30",
+		"efficiency_loss": 0.0
+	},
+	{
+		"orientation": "S",
+		"inclination": 40,
+		"lookup": "S_40",
+		"efficiency_loss": 0.0
+	},
+	{
+		"orientation": "S",
+		"inclination": 50,
+		"lookup": "S_50",
+		"efficiency_loss": 3.0
+	},
+	{
+		"orientation": "S",
+		"inclination": 60,
+		"lookup": "S_60",
+		"efficiency_loss": 7.0
+	},
+	{
+		"orientation": "S",
+		"inclination": 70,
+		"lookup": "S_70",
+		"efficiency_loss": 14.0
+	},
+	{
+		"orientation": "S",
+		"inclination": 80,
+		"lookup": "S_80",
+		"efficiency_loss": 23.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 10,
+		"lookup": "E_10",
+		"efficiency_loss": 14.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 20,
+		"lookup": "E_20",
+		"efficiency_loss": 16.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 30,
+		"lookup": "E_30",
+		"efficiency_loss": 19.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 40,
+		"lookup": "E_40",
+		"efficiency_loss": 23.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 50,
+		"lookup": "E_50",
+		"efficiency_loss": 28.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 60,
+		"lookup": "E_60",
+		"efficiency_loss": 33.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 70,
+		"lookup": "E_70",
+		"efficiency_loss": 38.0
+	},
+	{
+		"orientation": "E",
+		"inclination": 80,
+		"lookup": "E_80",
+		"efficiency_loss": 44.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 10,
+		"lookup": "W_10",
+		"efficiency_loss": 14.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 20,
+		"lookup": "W_20",
+		"efficiency_loss": 16.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 30,
+		"lookup": "W_30",
+		"efficiency_loss": 19.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 40,
+		"lookup": "W_40",
+		"efficiency_loss": 23.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 50,
+		"lookup": "W_50",
+		"efficiency_loss": 28.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 60,
+		"lookup": "W_60",
+		"efficiency_loss": 33.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 70,
+		"lookup": "W_70",
+		"efficiency_loss": 38.0
+	},
+	{
+		"orientation": "W",
+		"inclination": 80,
+		"lookup": "W_80",
+		"efficiency_loss": 44.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 10,
+		"lookup": "SE_10",
+		"efficiency_loss": 10.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 20,
+		"lookup": "SE_20",
+		"efficiency_loss": 7.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 30,
+		"lookup": "SE_30",
+		"efficiency_loss": 6.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 40,
+		"lookup": "SE_40",
+		"efficiency_loss": 9.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 50,
+		"lookup": "SE_50",
+		"efficiency_loss": 10.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 60,
+		"lookup": "SE_60",
+		"efficiency_loss": 15.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 70,
+		"lookup": "SE_70",
+		"efficiency_loss": 20.0
+	},
+	{
+		"orientation": "SE",
+		"inclination": 80,
+		"lookup": "SE_80",
+		"efficiency_loss": 28.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 10,
+		"lookup": "SW_10",
+		"efficiency_loss": 10.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 20,
+		"lookup": "SW_20",
+		"efficiency_loss": 7.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 30,
+		"lookup": "SW_30",
+		"efficiency_loss": 6.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 40,
+		"lookup": "SW_40",
+		"efficiency_loss": 9.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 50,
+		"lookup": "SW_50",
+		"efficiency_loss": 10.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 60,
+		"lookup": "SW_60",
+		"efficiency_loss": 15.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 70,
+		"lookup": "SW_70",
+		"efficiency_loss": 20.0
+	},
+	{
+		"orientation": "SW",
+		"inclination": 80,
+		"lookup": "SW_80",
+		"efficiency_loss": 28.0
+	}
+]

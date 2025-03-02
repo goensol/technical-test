@@ -6,11 +6,13 @@ import type {
 
 import express from "express";
 import { SimulationController } from "../controllers/simulation";
+import { PgvisIrradianceProvider } from "../providers/irradiance/pgvis-api-irradiance.provider";
 import { SimulationService } from "../services/simulation";
 
 const router = express.Router();
 
-const simulationService = new SimulationService();
+const irradianceProvider = new PgvisIrradianceProvider();
+const simulationService = new SimulationService(irradianceProvider);
 const simulationController = new SimulationController(simulationService);
 
 router.get(
