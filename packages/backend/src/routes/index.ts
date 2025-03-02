@@ -2,7 +2,7 @@ import { asyncErrorMiddleware } from "@ensol-test/backend/middlewares/asyncError
 import type {
 	SimulationParameters,
 	SimulationResponse,
-} from "@ensol-test/types/simulations";
+} from "@ensol-test/types/simulation";
 
 import express from "express";
 
