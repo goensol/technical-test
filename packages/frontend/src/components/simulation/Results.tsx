@@ -19,7 +19,7 @@ export const Results = ({ results }: Props) => {
 				<Text>
 					Production d'énergie estimée :{" "}
 					<span style={{ fontWeight: 700 }}>
-						{results.estimatedEnergyProduction} kWh
+						{results.solarEnergyProduction} kWh
 					</span>
 				</Text>
 			</Stack>

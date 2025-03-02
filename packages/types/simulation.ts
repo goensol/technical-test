@@ -4,5 +4,5 @@ import type { z } from "zod";
 export type SimulationParameters = z.infer<typeof simulationSchema>;
 export type SimulationResponse = {
 	numberOfPanels: number;
-	estimatedEnergyProduction: number;
+	solarEnergyProduction: number;
 };
