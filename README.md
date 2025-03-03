@@ -6,8 +6,6 @@ Using our [Google Sheet Simulator](https://docs.google.com/spreadsheets/d/1OuyYj
 
 In other words, you will reverse engineer the current simulator spreadsheet to understand the dimensioning formula and use manual inputs, constants from the GSheet & PVGIS API to get all the parameters needed to compute the result.
 
-You don't need to add a backend app to solve the case. Running the calculations in the frontend is enough.
-
 # Project setup
 
 Before starting, you will need to installe NodeJS 18.12 or greater and Yarn.
@@ -61,6 +59,7 @@ yarn dev
 
 - The number of estimated panels
 - The estimated yearly produced energy in kWh
+- The estimated yearly savings in €
 
 ### UI
 
