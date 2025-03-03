@@ -1,10 +1,8 @@
 {
-  "extends": "../../config/tsconfig.base.json",
-  "compilerOptions": {
-    "paths": {
-      "@ensol-test/types/*": [
-        "./*"
-      ]
-    }
-  }
+	"extends": "../../config/tsconfig.base.json",
+	"compilerOptions": {
+		"paths": {
+			"@ensol-test/types/*": ["./*"]
+		}
+	}
 }

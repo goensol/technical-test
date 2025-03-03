@@ -1,0 +1,44 @@
+[
+	{
+		"name": "DualSun FLASH 425 Shingle Black",
+		"model": "DualSun Flash 425 Shingle Black",
+		"price": 170.0,
+		"power_dc_w": 425,
+		"quantity": 7,
+		"dimensions_mm": {
+			"length": 1899,
+			"width": 1096
+		},
+		"efficiency_percent": 20.0,
+		"warranty_years": 25,
+		"datasheet_url": "https://dualsun.com/wp-content/uploads/dualsun-fr-fiche-technique-flash-425-shingle-black.pdf"
+	},
+	{
+		"name": "DualSun FLASH 425 TopCon",
+		"model": "DualSun Flash 425 TopCon",
+		"price": 150.0,
+		"power_dc_w": 425,
+		"quantity": 7,
+		"dimensions_mm": {
+			"length": 1722,
+			"width": 1134
+		},
+		"efficiency_percent": 21.0,
+		"warranty_years": 25,
+		"datasheet_url": ""
+	},
+	{
+		"name": "DualSun FLASH 500 Half-Cut Black",
+		"model": "DualSun Flash 500 Half-Cut Black",
+		"price": 180.0,
+		"power_dc_w": 500,
+		"quantity": 7,
+		"dimensions_mm": {
+			"length": 2094,
+			"width": 1134
+		},
+		"efficiency_percent": 20.0,
+		"warranty_years": 25,
+		"datasheet_url": "https://dualsun.com/wp-content/uploads/dualsun-fr-fiche-technique-flash-500-half-cut-black.pdf"
+	}
+]
