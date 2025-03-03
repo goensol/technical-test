@@ -17,7 +17,6 @@ export class SimulationController {
 		req: Request<SimulationParameters>,
 		res: Response<SimulationResponse>,
 	) {
-		console.log("req.query", req.query);
 		const validationResult = simulationSchema.safeParse(req.query);
 		if (!validationResult.success) {
 			throw new HttpError(
