@@ -5,11 +5,19 @@ import { Simulation } from "@ensol-test/frontend/components/simulation/Simulatio
 import { MantineProvider } from "@mantine/core";
 
 import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
+import "leaflet/dist/leaflet.css";
+import { Notifications } from "@mantine/notifications";
 import { QueryClientProvider } from "@tanstack/react-query";
+import { z } from "zod";
+import { customErrorMap } from "./helpers/customErrorMap";
+
+z.setErrorMap(customErrorMap);
 
 function App() {
 	return (
 		<MantineProvider theme={theme}>
+			<Notifications />
 			<AppShell>
 				<QueryClientProvider client={queryClient}>
 					<Simulation />

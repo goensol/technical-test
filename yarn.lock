@@ -417,25 +417,30 @@ __metadata:
     "@mantine/core": "npm:^7.4.2"
     "@mantine/form": "npm:^7.4.2"
     "@mantine/hooks": "npm:^7.4.2"
-    "@mantine/notifications": "npm:^7.17.0"
+    "@mantine/notifications": "npm:^7.17.1"
     "@tanstack/react-query": "npm:^5.29.0"
+    "@types/leaflet": "npm:^1.9.16"
     "@types/prettier": "npm:^3.0.0"
     "@types/react": "npm:^18.2.43"
     "@types/react-dom": "npm:^18.2.17"
     "@typescript-eslint/eslint-plugin": "npm:^6.14.0"
     "@typescript-eslint/parser": "npm:^6.14.0"
     "@vitejs/plugin-react": "npm:^4.2.1"
+    axios: "npm:^1.8.1"
     eslint: "npm:^8.55.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-prettier: "npm:^5.0.1"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.5"
+    leaflet: "npm:^1.9.4"
     prettier: "npm:^3.0.3"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-hook-form: "npm:^7.54.2"
+    react-leaflet: "npm:^4.2.1"
     typescript: "npm:^5.2.2"
     vite: "npm:^5.0.8"
+    zod: "npm:^3.24.2"
   languageName: unknown
   linkType: soft
 
@@ -853,7 +858,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/notifications@npm:^7.17.0":
+"@mantine/notifications@npm:^7.17.1":
   version: 7.17.1
   resolution: "@mantine/notifications@npm:7.17.1"
   dependencies:
@@ -937,6 +942,17 @@ __metadata:
   version: 0.1.1
   resolution: "@pkgr/core@npm:0.1.1"
   checksum: 10/6f25fd2e3008f259c77207ac9915b02f1628420403b2630c92a07ff963129238c9262afc9e84344c7a23b5cc1f3965e2cd17e3798219f5fd78a63d144d3cceba
+  languageName: node
+  linkType: hard
+
+"@react-leaflet/core@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@react-leaflet/core@npm:2.1.0"
+  peerDependencies:
+    leaflet: ^1.9.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 10/12ce28b85cf6712a1a7b7c49466b941fc619bc7b1535308bc5711a35f7e89eb16298babfd62f6b3a92e64abf94dcf517b2bc460f59fcf20599821bc6ab3b3048
   languageName: node
   linkType: hard
 
@@ -1337,6 +1353,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/geojson@npm:*":
+  version: 7946.0.16
+  resolution: "@types/geojson@npm:7946.0.16"
+  checksum: 10/34d07421bdd60e7b99fa265441d17ac6e9aef48e3ce22d04324127d0de1daf7fbaa0bd3be1cece2092eb6995f21da84afa5231e24621a2910ff7340bc98f496f
+  languageName: node
+  linkType: hard
+
 "@types/http-errors@npm:*":
   version: 2.0.4
   resolution: "@types/http-errors@npm:2.0.4"
@@ -1348,6 +1371,15 @@ __metadata:
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
   checksum: 10/1a3c3e06236e4c4aab89499c428d585527ce50c24fe8259e8b3926d3df4cfbbbcf306cfc73ddfb66cbafc973116efd15967020b0f738f63e09e64c7d260519e7
+  languageName: node
+  linkType: hard
+
+"@types/leaflet@npm:^1.9.16":
+  version: 1.9.16
+  resolution: "@types/leaflet@npm:1.9.16"
+  dependencies:
+    "@types/geojson": "npm:*"
+  checksum: 10/a5e51da4c9f4d4d3f290752de15bb3b31e354286b32088ed3b61b74e07f8c4c0306479dc52059778690e55a8c2685921234c15fd2c184e13ce6cb13b06422e41
   languageName: node
   linkType: hard
 
@@ -1756,6 +1788,17 @@ __metadata:
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
   checksum: 10/6ae80dda9736bb4762ce717f1a26ff997d94672d3a5799ad9941c24d4fb019c1dff45be8272f08d1975d7950bac281f3ba24aff5ecd49ef5a04d872ec428782f
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "axios@npm:1.8.1"
+  dependencies:
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10/5a09a2b39e724e018bc94d0424bb1a6042e71864039fbcc8c8d9dd50f3acd9d01f81b895994c9b46bc82c026afa3dfd1ec343a27bfe4723b70841f3b3dd6edfa
   languageName: node
   linkType: hard
 
@@ -3269,6 +3312,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"leaflet@npm:^1.9.4":
+  version: 1.9.4
+  resolution: "leaflet@npm:1.9.4"
+  checksum: 10/7b6a74d503980961a85bdabebf9d1162c26db0e88195800ceea311682b653d621718f2ada3c9aab903a735af9862c9ae278ba550d4429acbd954d43449cd0d77
+  languageName: node
+  linkType: hard
+
 "levn@npm:^0.4.1":
   version: 0.4.1
   resolution: "levn@npm:0.4.1"
@@ -3965,6 +4015,19 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 10/5aa564a1cde7d391ac980bedee21202fc90bdea3b399952117f54fb71a932af1e5902020144fb354b4690b2414a0c7aafe798eb617b76a3d441d956db7726fdf
+  languageName: node
+  linkType: hard
+
+"react-leaflet@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "react-leaflet@npm:4.2.1"
+  dependencies:
+    "@react-leaflet/core": "npm:^2.1.0"
+  peerDependencies:
+    leaflet: ^1.9.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 10/01cee12dc32e86d0153c989894fdba1c5c50fa41ad8d712352fa616f7b0dd32844aa17bb06c66f7569133675e2946c669090b4c496610cce3fa37c22254ca89f
   languageName: node
   linkType: hard
 

@@ -6,12 +6,24 @@ import type {
 	SimulationResponse,
 } from "@ensol-test/types/simulation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Card, NumberInput, Select, Stack, Title } from "@mantine/core";
+import {
+	Button,
+	Card,
+	Input,
+	NumberInput,
+	Select,
+	Stack,
+	Title,
+} from "@mantine/core";
+import { LatLng } from "leaflet";
 import { Controller, useForm } from "react-hook-form";
+import { CoordinatesPicker } from "../ui/map/CoordinatesPicker";
 
 type Props = {
 	onSubmit: (results: SimulationResponse) => void;
 };
+
+const defaultCoordinates: LatLng = new LatLng(48.8566, 2.3522);
 
 const orientationOptions = Object.keys(orientationEnum).map((key) => ({
 	value: key,
@@ -25,6 +37,13 @@ export const Form = ({ onSubmit }: Props) => {
 		formState: { errors },
 	} = useForm<SimulationParameters>({
 		resolver: zodResolver(simulationSchema),
+		defaultValues: {
+			coordinates: {
+				latitude: defaultCoordinates.lat,
+				longitude: defaultCoordinates.lng,
+			},
+			orientation: "S",
+		},
 	});
 
 	const launchSimulation = useLaunchSimulation();
@@ -39,8 +58,28 @@ export const Form = ({ onSubmit }: Props) => {
 			<Title order={3} mb={10}>
 				Simulateur
 			</Title>
+
 			<form onSubmit={handleSubmit(submitForm)}>
 				<Stack>
+					<Controller
+						name="coordinates"
+						control={control}
+						render={({ field }) => (
+							<CoordinatesPicker
+								position={
+									new LatLng(field.value.latitude, field.value.longitude)
+								}
+								setPosition={(newCoords: LatLng) => {
+									field.onChange({
+										latitude: newCoords.lat,
+										longitude: newCoords.lng,
+									});
+								}}
+							/>
+						)}
+					/>
+					<Input.Error>{errors.coordinates?.message}</Input.Error>
+
 					<Controller
 						name="orientation"
 						control={control}
@@ -93,42 +132,6 @@ export const Form = ({ onSubmit }: Props) => {
 								suffix="€"
 								{...field}
 								error={errors.monthlyBill?.message}
-							/>
-						)}
-					/>
-
-					<Controller
-						name="latitude"
-						control={control}
-						render={({ field }) => (
-							<NumberInput
-								label="Latitude"
-								placeholder="46.227638"
-								withAsterisk
-								hideControls
-								min={-90}
-								max={90}
-								decimalScale={6}
-								{...field}
-								error={errors.latitude?.message}
-							/>
-						)}
-					/>
-
-					<Controller
-						name="longitude"
-						control={control}
-						render={({ field }) => (
-							<NumberInput
-								label="Longitude"
-								placeholder="5.644508"
-								withAsterisk
-								hideControls
-								min={-180}
-								max={180}
-								decimalScale={6}
-								{...field}
-								error={errors.longitude?.message}
 							/>
 						)}
 					/>

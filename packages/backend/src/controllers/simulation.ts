@@ -17,6 +17,7 @@ export class SimulationController {
 		req: Request<SimulationParameters>,
 		res: Response<SimulationResponse>,
 	) {
+		console.log("req.query", req.query);
 		const validationResult = simulationSchema.safeParse(req.query);
 		if (!validationResult.success) {
 			throw new HttpError(
@@ -25,11 +26,11 @@ export class SimulationController {
 			);
 		}
 
-		const { latitude, longitude, orientation, inclination, monthlyBill } =
+		const { coordinates, orientation, inclination, monthlyBill } =
 			validationResult.data;
 		const result = await this.simulationService.calculateSimulation(
-			latitude,
-			longitude,
+			coordinates.latitude,
+			coordinates.longitude,
 			orientation,
 			inclination,
 			monthlyBill,

@@ -14,7 +14,7 @@ type Props = {
 
 export const AppShell = ({ children }: Props) => (
 	<BaseAppShell header={{ height: 60 }} padding="lg">
-		<BaseAppShell.Header>
+		<BaseAppShell.Header zIndex={2000}>
 			<Group h="100%" px="lg" justify="space-between">
 				<Group>
 					<Logo height={28} />

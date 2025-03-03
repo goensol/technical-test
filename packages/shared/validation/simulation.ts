@@ -16,16 +16,18 @@ export const simulationSchema = z.object({
 		.number()
 		.int()
 		.positive({ message: "Le coût mensuel doit être un entier positif" }),
-	latitude: z.coerce
-		.number()
-		.min(-90, { message: "La latitude doit être comprise entre -90° et 90°" })
-		.max(90, { message: "La latitude doit être comprise entre -90° et 90°" }),
-	longitude: z.coerce
-		.number()
-		.min(-180, {
-			message: "La longitude doit être comprise entre -180° et 180°",
-		})
-		.max(180, {
-			message: "La longitude doit être comprise entre -180° et 180°",
-		}),
+	coordinates: z.object({
+		latitude: z.coerce
+			.number()
+			.min(-90, { message: "La latitude doit être comprise entre -90° et 90°" })
+			.max(90, { message: "La latitude doit être comprise entre -90° et 90°" }),
+		longitude: z.coerce
+			.number()
+			.min(-180, {
+				message: "La longitude doit être comprise entre -180° et 180°",
+			})
+			.max(180, {
+				message: "La longitude doit être comprise entre -180° et 180°",
+			}),
+	}),
 });
